@@ -18,12 +18,12 @@ import Image4 from '../../assets/products-images/Quad-Pro/image-4.png';
 import Image6 from '../../assets/products-images/Quad-Pro/Image-61.png';
 
 // Import your gallery images here
-import gallery1 from '../../assets/products-images/Quad Pro/Image-5.1.jpeg';
-import gallery2 from '../../assets/products-images/Quad Pro/Image-5.2.jpeg';
-import gallery3 from '../../assets/products-images/Quad Pro/Image-5.3.png';
-import gallery4 from '../../assets/products-images/Quad Pro/Image-5.4.png';
-import gallery5 from '../../assets/products-images/Quad Pro/Image-5.5.jpg';
-import gallery6 from '../../assets/products-images/Quad Pro/Image-5.6.png';
+import gallery1 from '../../assets/products-images/Quad-Pro/Image-5.1.jpeg';
+import gallery2 from '../../assets/products-images/Quad-Pro/Image-5.2.jpeg';
+import gallery3 from '../../assets/products-images/Quad-Pro/Image-5.3.png';
+import gallery4 from '../../assets/products-images/Quad-Pro/Image-5.4.png';
+import gallery5 from '../../assets/products-images/Quad-Pro/Image-5.5.jpg';
+import gallery6 from '../../assets/products-images/Quad-Pro/Image-5.6.png';
 
 // Import images for last section
 import Image7 from '../../assets/products-images/Quad-Pro/Image-7.1.png';
