@@ -12,7 +12,7 @@ import HeroSectionpic from '../../assets/products-images/Quad-Pro/Image.png';
 import bgImage from '../../assets/products-images/Quad-Pro/Image-3.png';
 
 // Import the new image for the features section
-import Image4 from '../../assets/products-images/Quad-Pro/image-4.png';
+import Image4 from '../../assets/products-images/Quad-Pro/Image-4.png';
 
 // Import the new image for the hardware structure section
 import Image6 from '../../assets/products-images/Quad-Pro/Image-61.png';
