@@ -4,12 +4,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    outDir: 'dist',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'animation-vendor': ['framer-motion', 'gsap'],
-          'ui-vendor': ['lucide-react'],
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          animations: ['framer-motion', 'gsap']
         }
       }
     },
