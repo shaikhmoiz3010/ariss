@@ -6,7 +6,7 @@ import bgblack from '../../assets/bg/black1.png';
 
 
 // Import the main hero image
-import HeroSectionpic from '../../assets/products-images/Quad-Pro/image.png';
+import HeroSectionpic from '../../assets/products-images/Quad-Pro/Image.png';
 
 // Import background and feature images
 import bgImage from '../../assets/products-images/Quad-Pro/Image-3.png';
