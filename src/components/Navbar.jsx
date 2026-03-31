@@ -194,7 +194,7 @@ const Navbar = () => {
             {/* Left Side - Logo */}
             <div className="flex items-center">
               <a href="/" className="relative group">
-                <span className="text-2xl font-black tracking-wider bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 bg-clip-text text-transparent animate-gradient-x">
+                <span className="text-2xl font-black tracking-wider bg-orange-600 bg-clip-text text-transparent animate-gradient-x">
                   ARISS
                 </span>
                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-full h-[3px] bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-all duration-500"></div>

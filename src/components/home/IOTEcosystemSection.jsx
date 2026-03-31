@@ -24,12 +24,12 @@ const IOTEcosystemSection = () => {
   const bottomRightIcon = icons[9]; // Last icon at bottom right
 
   return (
-    <section className="py-40 relative overflow-hidden bg-white">
+    <section className="bg-white relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <ScrollAnimation>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-orange-400 bg-clip-text text-transparent">
+              <span className="bg-orange-600 bg-clip-text text-transparent">
                 LARGEST IOT ECOSYSTEM
               </span>
             </h2>

@@ -129,7 +129,7 @@ const QuadProSwitch = () => {
 
 
       {/* Main Hero Section - Combined both sections */}
-      <section className="min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -201,7 +201,7 @@ const QuadProSwitch = () => {
       </section>
 
       {/* Device Preview Section */}
-      <section className="relative min-h-screen w-full overflow-hidden">
+      <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -229,7 +229,7 @@ const QuadProSwitch = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -312,7 +312,7 @@ const QuadProSwitch = () => {
       </section>
 
       {/* GALLERY SECTION - With Full Control Carousel */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-600 to-gray-500">
+      <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="max-w-6xl mx-auto">
 
           {/* 3-Column Grid Layout */}
@@ -577,7 +577,7 @@ const QuadProSwitch = () => {
       </AnimatePresence>
 
       {/* Quad Pro hardware structure */}
-      <section className="min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black py-1 sm:py-16` lg:py-2">
+      <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="max-w-6xl mx-auto w-full">
           <h2 className="bg-gradient-to-r from-orange-600 via-orange-300 to-orange-600 bg-clip-text text-transparent sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight justify-normal text-center">
             Engineered to Perform, Built to last<br className="hidden sm:block" />
@@ -633,7 +633,7 @@ const QuadProSwitch = () => {
       </section>
 
       {/* last Section */}
-      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-800 to-gray-600 overflow-hidden">
+      <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

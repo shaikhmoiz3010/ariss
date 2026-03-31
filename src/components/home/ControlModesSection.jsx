@@ -33,7 +33,7 @@ const ControlModesSection = () => {
     ];
 
     return (
-        <section id="control-modes" className="py-36 relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
+        <section id="control-modes" className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Gradient Background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-600/10"></div>
@@ -50,11 +50,11 @@ const ControlModesSection = () => {
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h2 className="text-4xl md:text-4xl font-bold mb-4">
-                            <span className="bg-orange-400 bg-clip-text text-transparent">
+                            <span className="bg-orange-600 bg-clip-text text-transparent">
                                 WITH ALL MODES OF CONTROL
                             </span>
                         </h2>
-                        <div className="w-2/3 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full"></div>
+                        <div className="w-2/3 h-1 bg-orange-600 mx-auto rounded-full"></div>
                     </div>
 
                     {/* Content Section - Middle */}

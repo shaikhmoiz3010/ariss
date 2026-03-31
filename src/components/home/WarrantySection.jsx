@@ -3,7 +3,7 @@ import ScrollAnimation from './ScrollAnimation';
 
 const WarrantySection = () => {
   return (
-    <section id="comp-lkgvo92u" className="py-36 relative overflow-hidden bg-white">
+    <section id="comp-lkgvo92u" className="bg-white relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">

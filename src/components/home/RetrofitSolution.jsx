@@ -3,7 +3,7 @@ import ScrollAnimation from './ScrollAnimation';
 
 const RetrofitSolution = () => {
   return (
-    <section className="py-36 relative overflow-hidden bg-gradient-to-b from-black to-orange-400/20">
+    <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-transparent to-orange-400"></div>
