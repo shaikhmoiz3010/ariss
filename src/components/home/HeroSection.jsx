@@ -6,6 +6,9 @@ import ScrollAnimation from './ScrollAnimation';
 import BlurText from '../animations/text/BlurText';
 import MagicRings from '../animations/MagicRings';
 
+
+import black4 from "../../assets/bg/black11.jpg";
+
 // import choose ariss section
 
 const HeroSection = () => {
@@ -18,31 +21,17 @@ const HeroSection = () => {
     return (
 
         <section className="bg-black relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Silk Background - Full section background */}
-            <div className="absolute inset-0 w-full max-h-full overflow-hidden">
-                <MagicRings
-                    color="#efa34e"
-                    colorTwo="#e87121"
-                    ringCount={9}
-                    speed={1.1}
-                    attenuation={20}
-                    lineThickness={1.2}
-                    baseRadius={0.39}
-                    radiusStep={0.13}
-                    scaleRate={0.2}
-                    opacity={1.4}
-                    blur={0}
-                    noiseAmount={0}
-                    rotation={0}
-                    ringGap={1}
-                    fadeIn={0.7}
-                    fadeOut={0.5}
-                    followMouse
-                    mouseInfluence={0}
-                    hoverScale={1}
-                    parallax={0}
-                    clickBurst={false}
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img 
+                    src={black4}
+                    alt="Smart Home Automation"
+                    className="w-full h-full object-fill"
                 />
+                {/* Dark Overlay for better text readability */}
+                {/* <div className="absolute inset-0 bg-black/60"></div> */}
+                {/* Gradient overlay for smooth blending */}
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div> */}
             </div>
 
             {/* Content - Centered both vertically and horizontally */}
