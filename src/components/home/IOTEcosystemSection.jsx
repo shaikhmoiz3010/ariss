@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Sun, Home as HomeIcon, Activity, Music, Dog, Shield, Battery, Heart, Car } from 'lucide-react';
 import ScrollAnimation from './ScrollAnimation';
 
+import bghome from "../../assets/bg/home-automation.jpg"
+
 import icon1 from '../../assets/Logos/icon1.png'
 import icon2 from '../../assets/Logos/icon2.png'
 import icon3 from '../../assets/Logos/icon3.png'
@@ -25,15 +27,15 @@ const IOTEcosystemSection = () => {
 
   return (
     <section className="bg-white relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div className="relative max-w-7xl mx-auto">
         <ScrollAnimation>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="my-10 text-center mb-12">
+            <h2 className="text-4xl md:text-6xl font-bold mb-12">
               <span className="bg-orange-600 bg-clip-text text-transparent">
                 LARGEST IOT ECOSYSTEM
               </span>
             </h2>
-            <p className="text-black max-w-3xl mx-auto">
+            <p className="text-black max-w-xl sm:px-3 mx-auto">
               As the world's largest IoT ecosystem, our network of interconnected devices and systems allows us to provide a diverse range of automation solutions to meet the needs of our customers
             </p>
           </div>
@@ -41,7 +43,7 @@ const IOTEcosystemSection = () => {
 
         <ScrollAnimation>
           {/* Desktop View - Original Flex Layout */}
-          <div className="hidden md:flex relative flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-1">
+          <div className="hidden md:flex relative flex-row justify-center items-center gap-10 sm:gap-8 md:gap-3 lg:gap-3">
             {icons.map((icon, index) => (
               <div
                 key={index}
@@ -49,69 +51,74 @@ const IOTEcosystemSection = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="relative group cursor-pointer transform transition-all duration-500 hover:scale-125">
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div>
-                  <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <img
                     src={icon}
                     alt={`ARISS Smart Home Feature ${index + 1}`}
-                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
+                    className="md:w-16 md:h-16 lg:w-24 lg:h-24 relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
                   />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Mobile View - L-Shaped Grid */}
-          {/* Mobile View - L-Shaped Grid with CSS Grid */}
-          <div className="md:hidden">
-            <div className="grid grid-cols-5 gap-3 max-w-md mx-auto">
-              {/* Top Row - 5 Icons (Row 1, Col 1-5) */}
-              {topRowIcons.map((icon, index) => (
-                <div
-                  key={`top-${index}`}
-                  className="col-span-1 flex justify-center"
-                  style={{ gridRow: 1, gridColumn: index + 1 }}
-                >
-                  <div className="relative group cursor-pointer transform transition-all duration-500 hover:scale-125">
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div>
-                    <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                   <img
-                      src={icon}
-                      alt={`ARISS Smart Home Feature ${index + 1}`}
-                      className="w-24 h-24 sm:w-24 sm:h-24 object-contain relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
-                    />
-                  </div>
+          {/* Mobile View - L-Shaped Grid with Image covering remaining space */}
+          <div className="md:hidden grid grid-cols-5 grid-rows-5 gap-1 m-10 my-9 px-2 py-2 ">
+            {/* Top Row - Row 1 (5 icons) */}
+            {topRowIcons.map((icon, index) => (
+              <div
+                key={`top-${index}`}
+                className="flex justify-center items-center"
+              >
+                <div className="relative group cursor-pointer transform transition-all duration-500 hover:scale-125">
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div>
+                  <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <img
+                    src={icon}
+                    alt={`ARISS Smart Home Feature ${index + 1}`}
+                    className="w-16 h-16 relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
+                  />
                 </div>
-              ))}
-
-              {/* Left Column - 4 Icons (Rows 2-5, Col 1) */}
-              {leftColumnIcons.map((icon, index) => (
-                <div
-                  key={`left-${index}`}
-                  className="flex justify-center"
-                  style={{ gridRow: index + 2, gridColumn: 1 }}
-                >
-                  <div className="relative group cursor-pointer transform transition-all duration-500 hover:scale-125">
-                    {/* <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div> */}
-                    <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <img
-                      src={icon}
-                      alt={`ARISS Smart Home Feature ${index + 6}`}
-                      className="w-24 h-24 sm:w-24 sm:h-24 object-contain relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
-                    />
-                  </div>
-                </div>
-              ))}
-
-              {/* Bottom Right Icon (Row 5, Col 5) */}
-              <div  className="flex justify-end items-end">
-
               </div>
+            ))}
+
+            {/* Left Column Icons (Rows 2-5, Column 1) */}
+            {leftColumnIcons.map((icon, index) => (
+              <div
+                key={`left-${index}`}
+                className="flex justify-center items-center"
+                style={{ gridRow: index + 2, gridColumn: 1 }}
+              >
+                <div className="relative group cursor-pointer transform transition-all duration-500 hover:scale-125">
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div>
+                  <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <img
+                    src={icon}
+                    alt={`ARISS Smart Home Feature ${index + 1}`}
+                    className="w-16 h-16 relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
+                  />
+                </div>
+              </div>
+            ))}
+
+            {/* Image covering remaining space - Rows 2-5, Columns 2-5 */}
+            <div 
+              className="relative h-[260px] m-6 overflow-hidden rounded-md shadow-xl hover:scale-110 transition-transform duration-500"
+              style={{ 
+                gridRow: '2 / 6', 
+                gridColumn: '2 / 6',
+              }}
+            >
+              <img
+                src={bghome}
+                alt="Smart Home Ecosystem"
+                className="w-full h-full object-cover transition-transform duration-700 "
+              />
+              {/* Optional overlay for better text visibility if needed */}
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-orange-500/20"></div> */}
             </div>
           </div>
         </ScrollAnimation>
       </div>
-
     </section>
   );
 };

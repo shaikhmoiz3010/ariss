@@ -19,18 +19,33 @@ const ChooseArissSection = () => {
       <div className="absolute inset-0 bg-white"></div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 z-10">
+      <div className="relative 
+      max-w-7xl 
+      mx-auto 
+      px-16 sm:px-20 md:px-24 lg:px-4 
+      z-10">
         <ScrollAnimation>
-          <div className="text-center mb-8 md:mb-10 lg:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-              <span className="bg-orange-600 bg-clip-text text-transparent">
+          <div className="text-center 
+          mb-24 sm:mb-20 md:mb-16 lg:mb-12">
+            <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl 
+            font-medium
+            mt-20 sm:mt-16 md:mt-16 lg:mt-16">
+              <span className="bg-orange-600 
+              bg-clip-text 
+              text-transparent">
                WHY CHOOSE ARISS
               </span>
             </h2>
 
             <ScrollAnimation>
               {/* Enhanced Glowing Icons Grid */}
-              <div className="relative flex flex-row justify-center items-center gap-3 sm:gap-5 md:gap-5 mt-20 lg:gap-12 sm:mt-16 md:mt-20 lg:mt-20">
+              <div className="relative 
+              flex 
+              flex-row 
+              justify-center 
+              items-center 
+              gap-3 sm:gap-4 md:gap-6 lg:gap-10
+              mt-16 sm:mt-12 md:mt-16 lg:mt-16">
                 {[icon1, icon2, icon3, icon4, icon5].map((icon, index) => (
                   <div
                     key={index}
@@ -41,7 +56,7 @@ const ChooseArissSection = () => {
                     {/* Icon Container */}
                     <div className="relative group cursor-pointer transform transition-all duration-500 hover:scale-125">
                       {/* Rotating Glow Effect on Hover */}
-                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div>
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-800 via-orange-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md animate-spin-slow"></div>
 
                       {/* Icon Shadow Glow */}
                       <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -49,35 +64,54 @@ const ChooseArissSection = () => {
                       <img
                         src={icon}
                         alt={`ARISS Smart Home Feature ${index + 1}`}
-                        className="w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-20 lg:h-20 object-contain relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
+                        className="relative
+                        w-16 sm:w-20 md:w-20 lg:w-20
+                        h-16 sm:h-20 md:h-20 lg:h-20 
+                        object-contain 
+                        z-10 
+                        transition-all duration-500 
+                        group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.7)]"
                       />
-
-
                     </div>
                   </div>
                 ))}
               </div>
             </ScrollAnimation>
 
-            <div className="max-w-4xl mx-auto mt-4 md:mt-6">
+            <div className="max-w-4xl 
+            mx-auto 
+            mt-9 sm:mt-10 md:mt-10 lg:mt-12">
               <div
                 className={`
                   overflow-hidden transition-all duration-500 ease-in-out
-                  ${expanded ? 'max-h-max' : 'max-h-24 sm:max-h-28 md:max-h-24 lg:max-h-28'}
+                  ${expanded ? 'max-h-max' : 'max-h-16 sm:max-h-16 md:max-h-20 lg:max-h-12'}
                 `}
               >
-                <p className="text-gray-700 text-sm sm:text-sm md:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto sm:px-0">
+                <p className="text-gray-700 
+                text-sm sm:text-sm md:text-base lg:text-lg 
+                leading-relaxed 
+                max-w-3xl 
+                mx-auto 
+                sm:px-0">
                   ARISS is a brand for Anyone interested in using high-quality smart home devices to enjoy a whole-house intelligent lifestyle. Our mission is to design and provide Comprehensive solutions to house devices for the enjoyment of our honoured customers.
 
                   {expanded && (
-                    <span className="block mt-3 sm:mt-3 md:mt-4 lg:mt-4 text-sm sm:text-sm  md:text-base lg:text-lg">
+                    <span className="block 
+                    mt-3 sm:mt-3 md:mt-4 lg:mt-4 
+                    text-sm sm:text-sm  md:text-base lg:text-lg">
                       ARISS offers a smart home solution that is easy to install, operate, and upgrade. With features like compatibility with Alexa, Google Home, and Siri, modular upgradeability, and OTA firmware updates, ARISS provides a convenient and user-friendly solution for enhancing your home's functionality. The products are also backed by a 5-year warranty, giving you added peace of mind. Whether you are looking to upgrade your home's lighting, security, or energy efficiency, ARISS has a solution to meet your needs. So choose ARISS and take your home to the next level of convenience and control.
                     </span>
                   )}
                 </p>
 
                 {!expanded && (
-                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto px-2 sm:px-0 mt-3">
+                  <p className="text-gray-700 
+                  text-sm sm:text-base md:text-lg 
+                  leading-relaxed 
+                  max-w-3xl 
+                  mx-auto 
+                  px-2 sm:px-0 
+                  mt-3">
                     ARISS offers a smart home solution that is easy to install, operate, and upgrade. With features like compatibility with Alexa, Google Home, and Siri, modular upgradeability, and OTA firmware updates, ARISS provides a convenient and user-friendly solution for enhancing your home's functionality...
                   </p>
                 )}
@@ -85,7 +119,17 @@ const ChooseArissSection = () => {
 
               <button
                 onClick={toggleReadMore}
-                className="inline-block mt-3 sm:mt-4 text-orange-600 font-medium text-sm sm:text-base border-b border-orange-200 hover:border-orange-600 transition-colors cursor-pointer focus:outline-none"
+                className="inline-block 
+                mt-3 sm:mt-4 
+                text-orange-600 
+                font-medium 
+                text-sm sm:text-base 
+                border-b 
+                border-orange-200 
+                hover:border-orange-600 
+                transition-colors 
+                cursor-pointer 
+                focus:outline-none"
               >
                 {expanded ? 'Read less ↑' : 'Read more →'}
               </button>

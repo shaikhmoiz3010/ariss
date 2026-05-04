@@ -6,6 +6,8 @@ import {
   Monitor, Cpu, Wifi, Shield, Lightbulb, DoorOpen
 } from 'lucide-react';
 
+import logo from '../assets/Logos/logo.png';
+
 // Enhanced product data structure with rich metadata
 const productData = {
   categories: [
@@ -183,36 +185,58 @@ const Navbar = () => {
     <>
       <nav className="fixed w-full z-50 transition-all duration-700">
         <div className="">
-          <div className={`px-6 py-2
-            relative flex justify-between items-center
-            bg-black backdrop-blur-2xl backdrop-saturate-200
-            shadow-[0_8px_32px_rgba(0,0,0,0.4)]
-            transition-all duration-500
-
+          <div className={`relative
+          px-5 md:px-8 lg:px-12
+          py-1 md:py-3 lg:py-4
+          flex justify-between
+          items-center
+          bg-black backdrop-blur-2xl backdrop-saturate-200
+          shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+          transition-all duration-500
           `}>
             
             {/* Left Side - Logo */}
             <div className="flex items-center">
               <a href="/" className="relative group">
-                <span className="text-2xl font-black tracking-wider bg-orange-600 bg-clip-text text-transparent animate-gradient-x">
-                  ARISS
-                </span>
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-full h-[3px] bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-all duration-500"></div>
+              <img className="h-4 sm:h-5 md:h-5 lg:h-6 
+              w-auto 
+              px-2" src={logo} alt="Logo" />
+                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-full h-[3px] bg-gradient-to-r from-transparent via-orange-600 transition-all duration-500"></div>
               </a>
             </div>
 
             {/* Right Side - All Navigation Elements */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5">
               {/* Navigation Links - Home, Contact, About */}
-              <div className="hidden md:flex items-center gap-2">
+              <div className="hidden 
+              md:flex 
+              items-center 
+              gap-3">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
-                    className="group relative px-3 py-2 rounded-xl transition-all duration-300"
+                    className="group 
+                    relative 
+                    px-3 
+                    py-2 
+                    rounded-xl 
+                    transition-all duration-300"
                   >
-                    <div className="absolute inset-0 bg-white/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <span className="relative z-10 flex items-center gap-2 text-white group-hover:text-white font-medium text-base">
+                    <div className="absolute 
+                    inset-0 
+                    bg-white/20 
+                    rounded-2xl 
+                    opacity-0 
+                    group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <span className="relative 
+                    z-10 flex 
+                    items-center 
+                    gap-2 
+                    text-white 
+                    group-hover:text-orange-600 
+                    font-medium 
+                    text-base">
                       {link.name}
                     </span>
                   </a>
@@ -220,7 +244,10 @@ const Navbar = () => {
               </div>
 
               {/* Desktop Menu Items */}
-              <div className="hidden md:flex items-center gap-2">
+              <div className="hidden 
+              md:flex 
+              items-center 
+              gap-2">
                 {/* Products Menu */}
                 <div
                   ref={productMenuRef}
@@ -229,17 +256,37 @@ const Navbar = () => {
                   onMouseLeave={handleProductMenuLeave}
                 >
                   <button
-                    className="group relative px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-10 overflow-hidden"
+                    className="group relative 
+                    px-4 
+                    py-2 
+                    rounded-full 
+                    transition-all duration-300 
+                    flex 
+                    items-center 
+                    gap-10 
+                    overflow-hidden"
                     aria-expanded={isProductMenuOpen}
                     aria-haspopup="true"
                   >
-                    <div className="absolute inset-0 bg-white/20 rounded-full group-hover:from-orange-600 group-hover:to-orange-600 transition-all duration-500"></div>
+                    <div className="absolute 
+                    inset-0 
+                    bg-white/20 
+                    rounded-full 
+                    group-hover:from-orange-600 group-hover:to-orange-600 transition-all duration-500"></div>
                     
-                    <span className="relative z-10 flex items-center gap-2 text-white font-semibold text-base tracking-wide">
+                    <span className="relative 
+                    z-10 
+                    flex 
+                    items-center 
+                    gap-2 
+                    text-white 
+                    font-semibold 
+                    text-base 
+                    tracking-wide">
                       <span className="bg-gradient-to-r from-white to-white bg-clip-text text-transparent group-hover:text-white transition-all duration-300">
                         Products
                       </span>
-                      <ChevronDown size={14} className={`transition-all duration-400 ${isProductMenuOpen ? 'rotate-180 text-orange-400' : 'group-hover:text-orange-400'}`} />
+                      <ChevronDown size={14} className={`transition-all duration-400 ${isProductMenuOpen ? 'rotate-180 text-orange-600' : 'group-hover:text-orange-600'}`} />
                     </span>
                   </button>
 
@@ -247,12 +294,12 @@ const Navbar = () => {
                   {isProductMenuOpen && (
                     <div className={`absolute right-0 top-full mt-3 min-w-[850px] transform transition-all duration-400 ${menuAnimation ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
                       }`}>
-                      <div className="bg-gradient-to-br from-gray-900 via-black/60 to-gray-900 border border-orange-500/40 rounded-2xl shadow-2xl shadow-orange-600/30 overflow-hidden">
+                      <div className="bg-gradient-to-br from-black via-black/90 to-black border border-orange-600 rounded-xl shadow-xl overflow-hidden">
                         <div className="grid grid-cols-4 gap-0 p-3">
                           {/* Categories Column */}
                           <div className="col-span-1 border-r border-orange-600 pr-3">
                             <div className="flex items-center mb-1 px-2 py-2">
-                              <span className="text-orange-500 text-xs font-bold uppercase tracking-widest">Categories</span>
+                              <span className="text-orange-600 text-md font-bold uppercase tracking-widest">Categories</span>
                             </div>
                             <div className="space-y-2">
                               {productData.categories.map((category) => {
@@ -262,13 +309,13 @@ const Navbar = () => {
                                     key={category.id}
                                     onMouseEnter={() => setActiveCategory(category.id)}
                                     onClick={() => setActiveCategory(category.id)}
-                                    className={`w-full text-left px-3 py-2.5 rounded-xl transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${activeCategory === category.id
+                                    className={`w-full text-left px-3 py-3 rounded-full transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${activeCategory === category.id
                                         ? 'bg-orange-600 text-white'
-                                        : 'text-gray-300 hover:bg-white hover:text-white'
+                                        : 'text-white hover:bg-orange-600 hover:text-white'
                                       }`}
                                   >
                                     <div className="flex items-center gap-3 relative z-10">
-                                      <div className="font-light text-sm">{category.name}</div>
+                                      <div className="font-light text-md">{category.name}</div>
                                     </div>
                                     <ChevronRight size={12} className={`transition-all duration-300 ${activeCategory === category.id ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 group-hover:opacity-50 group-hover:translate-x-0'
                                       }`} />
@@ -298,15 +345,15 @@ const Navbar = () => {
                                       <a
                                         key={product.id}
                                         href={`/product/${product.id}`}
-                                        className="group/product relative p-3 bg-black/70 rounded-xl hover:bg-orange-600 border border-transparent hover:border-orange-600 transition-all duration-500"
+                                        className="group/product relative px-5 py-3 bg-black rounded-3xl hover:bg-orange-600 border border-transparent hover:border-orange-600 transition-all duration-500"
                                         style={{ animationDelay: `${idx * 50}ms` }}
                                       >
                                         <div className="flex items-center justify-between">
                                           <div>
-                                            <div className="text-white font-semibold text-sm group-hover/product:text-white transition-colors">
+                                            <div className="text-white font-light text-sm group-hover/product:text-white transition-colors">
                                               {product.name}
                                             </div>
-                                            <div className="text-xs text-white mt-0.5">{product.sku}</div>
+                                            <div className="text-xs text-gray-300 mt-0.5">{product.sku}</div>
                                           </div>
                                         </div>
                                       </a>
@@ -318,7 +365,7 @@ const Navbar = () => {
                           </div>
                         </div>
                         <div className="border-t border-orange-600 p-3 bg-black">
-                          <a href="/products" className="flex items-center justify-between text-orange-200 hover:text-white text-sm font-medium group">
+                          <a href="/products" className="flex items-center justify-between text-orange-600 hover:text-white text-sm font-medium group">
                             <span>Browse All Products →</span>
                           </a>
                         </div>
@@ -332,7 +379,7 @@ const Navbar = () => {
               <div className="md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="relative w-11 h-11 flex items-center justify-center text-white rounded-xl border border-orange-600 hover:border-orange-600 hover:bg-orange-600/30 transition-all duration-300"
+                  className="relative w-11 h-11 flex items-center justify-center text-white rounded-2xl hover:border-orange-600 hover:bg-orange-600 transition-all duration-300"
                   aria-label="Toggle menu"
                 >
                   <div className={`absolute inset-0 rounded-xl transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}></div>
@@ -350,24 +397,24 @@ const Navbar = () => {
               ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}
             `}
           >
-            <div className="h-full bg-gradient-to-br from-black to-black backdrop-blur-2xl border-t border-orange-600 p-3 overflow-y-auto custom-scrollbar">
+            <div className="h-full bg-gradient-to-br from-black/80 to-black backdrop-blur-2xl border-t border-orange-600 p-4 overflow-y-auto custom-scrollbar">
               {/* Products Section with nested accordion */}
               <div className="mb-3">
                 <button
                   onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                  className="flex items-center justify-between w-full px-4 py-3.5 text-white rounded-3xl hover:bg-white/10 transition-all duration-300 group border border-orange-600 hover:border-orange-600"
+                  className="flex items-center justify-between w-full px-4 py-3.5 text-white rounded-3xl hover:bg-white/10 transition-all duration-300 group border border-orange-600 hover:border-orange-500"
                 >
                   <div className="flex items-center gap-3">
                     <div className="text-left">
-                      <span className="font-bold text-lg bg-orange-600 bg-clip-text text-transparent block">Products</span>
-                      <span className="text-xs text-gray-200">Smart home collection</span>
+                      <span className="font-medium text-xl bg-orange-600 bg-clip-text text-transparent block">Products</span>
+                      <span className="text-sm text-gray-200">Smart Home Collection</span>
                     </div>
                   </div>
                   <ChevronDown size={20} className={`text-orange-600 transform transition-all duration-400 ${mobileProductsOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 <div className={`overflow-hidden transition-all duration-500 ease-in-out ${mobileProductsOpen ? 'max-h-[2000px] mt-3' : 'max-h-0'}`}>
-                  <div className="space-y-3 pl-2">
+                  <div className="space-y-2 pl-2">
                     {productData.categories.map((category) => {
                       const IconComp = category.iconComponent;
                       return (
@@ -387,16 +434,16 @@ const Navbar = () => {
                           </button>
 
                           <div className={`overflow-hidden transition-all duration-300 ${mobileActiveCategory === category.id ? 'max-h-[500px] mt-2' : 'max-h-0'}`}>
-                            <div className="ml-12 pl-3 border-l-2 border-orange-600 space-y-2 py-2">
+                            <div className="ml-12 pl-2 pr-4 border-l-2 border-orange-600 space-y-2 py-2">
                               {category.products.map((product) => (
                                 <a
                                   key={product.id}
                                   href={`/product/${product.id}`}
-                                  className="flex items-center justify-between p-3 bg-white/5 rounded-2xl hover:bg-orange-600/30 transition-all group"
+                                  className="flex items-center justify-between p-3 bg-white/5 rounded-2xl hover:bg-orange-600 transition-all group"
                                   onClick={() => setIsOpen(false)}
                                 >
                                   <div>
-                                    <div className="text-sm text-white group-hover:text-orange-300 font-medium">{product.name}</div>
+                                    <div className="text-sm text-white group-hover:text-white font-medium">{product.name}</div>
                                     <div className="text-xs text-gray-200">{product.sku}</div>
                                   </div>
                                 </a>
@@ -406,7 +453,7 @@ const Navbar = () => {
                         </div>
                       );
                     })}
-                    <a href="/products" className="flex items-center justify-between px-4 py-3 mt-2 text-white text-sm font-medium hover:text-orange-100 transition-colors bg-black border border-orange-600 rounded-xl">
+                    <a href="/products" className="flex items-center justify-between px-4 py-3 mt-2 text-white text-sm font-medium hover:text-orange-100 transition-colors bg-black border border-orange-500 rounded-xl">
                       <span>Browse all products</span>
                       <ArrowRight size={16} />
                     </a>
@@ -414,13 +461,13 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent my-4"></div>
+              <div className="h-px bg-gradient-to-r from-transparent via-orange-600 to-transparent my-4"></div>
 
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="flex items-center gap-3 px-4 py-3.5 text-white hover:text-white rounded-xl hover:bg-white/10 transition-all duration-300"
+                  className="flex items-center gap-3 px-4 py-3.5 text-white hover:text-orange-600 rounded-xl hover:bg-white/10 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   <div className="p-2 rounded-lg bg-white/5">
