@@ -6,14 +6,15 @@ import RetrofitSolution from '../components/home/RetrofitSolution';
 import ControlModesSection from '../components/home/ControlModesSection';
 import WarrantySection from '../components/home/WarrantySection';
 import CompatibleBrands from '../components/home/CompatibleBrands';
+import Hero from '../components/home/Hero';
 
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-black">
       <HeroSection />
+      <Hero />
       <ChooseArissSection />
-      <RetrofitSolution />
       <IOTEcosystemSection />
       <ControlModesSection />
       <WarrantySection />

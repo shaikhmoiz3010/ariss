@@ -186,11 +186,12 @@ const Navbar = () => {
       <nav className="fixed w-full z-50 transition-all duration-700">
         <div className="">
           <div className={`relative
+          bg-black/80
           px-5 md:px-8 lg:px-12
           py-1 md:py-3 lg:py-4
           flex justify-between
           items-center
-          bg-black backdrop-blur-2xl backdrop-saturate-200
+          backdrop-blur-0 backdrop-saturate-50
           shadow-[0_8px_32px_rgba(0,0,0,0.4)]
           transition-all duration-500
           `}>
