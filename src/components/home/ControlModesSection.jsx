@@ -47,7 +47,7 @@ const ControlModesSection = () => {
     };
 
     return (
-        <section id="control-modes" className="bg-black min-h-screen flex items-center justify-center overflow-hidden py-12 sm:py-16 lg:py-20">
+        <section id="control-modes" className="bg-white/95 min-h-screen flex items-center justify-center overflow-hidden py-12 sm:py-16 lg:py-20">
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollAnimation>
                     {/* Header */}
@@ -62,7 +62,7 @@ const ControlModesSection = () => {
 
                     {/* Content Section */}
                     <div className="max-w-full sm:max-w-3xl lg:max-w-5xl mx-auto text-center mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-0">
-                        <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
+                        <p className="text-black text-sm sm:text-base md:text-lg leading-relaxed">
                             The ARISS innovative modules are designed to work with all regular switches, including bell switches and toggle switches. The Smartlife APP is available for iPhones, and Android phones, tablets, iPads, and smartwatches. Additionally, the modules are compatible with Alexa, Google Home, and Siri Shortcuts for easy voice control.
                         </p>
                     </div>
@@ -75,7 +75,7 @@ const ControlModesSection = () => {
 
                             {/* Video Container - Change dimensions here directly */}
                             <div 
-                                className="relative rounded-full sm:rounded-full overflow-hidden border-2 border-orange-500/30 shadow-lg shadow-orange-500/20 bg-black mx-auto"
+                                className="relative rounded-2xl sm:rounded-2xl overflow-hidden mx-auto"
                                 style={{
                                     width: `${videoWidth}px`,
                                     height: `${videoHeight}px`,
