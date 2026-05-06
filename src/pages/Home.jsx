@@ -18,7 +18,6 @@ const Home = () => {
       <IOTEcosystemSection />
       <ControlModesSection />
       <WarrantySection />
-      <CompatibleBrands />
 
 
       <style>{`
